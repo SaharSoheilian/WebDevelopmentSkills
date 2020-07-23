@@ -1,0 +1,40 @@
+/*most to least value specificity from left to right*/
+/*stype attibute,id,class,element*/
+/*examples:
+    body div h1{} = 3
+    body .class #id p {} = 112
+    inline style attibute = 1000
+*/
+
+body {
+    background-image: url(zebra.jpg);
+    background-size: cover ;
+}
+
+/*group declaration, even for #id and .class*/
+h1, h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px black;
+    line-height: 1rem;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: rgb(0, 204, 255);
+}
+
+.borderImg {
+    border: 10px dashed red;
+}
+
+/*inherets to all lists levels (decendents)*/
+ul li {
+    color: darkgray;
+    font-size: 20px;
+}
+
+/*inherets to just one level (child selector)*/ 
+ul > li {
+    color: yellowgreen;
+    font-size: 20px;
+}
